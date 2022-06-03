@@ -93,23 +93,6 @@ axs[0].set_title("Incremento settimanale principali indicatori: Positivi-Decessi
                  fontsize=20)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #CALCOLO DIFFERENTE SENZA SEMIOLOGY
 
 df_r = df[["data", "terapia_intensiva", "nuovi_positivi", "var_tamponi", "var_deceduti",
