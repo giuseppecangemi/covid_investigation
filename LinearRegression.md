@@ -150,5 +150,58 @@ print(results_opp.summary())
 sns.regplot( df["tamponi"], df["totale_positivi"], marker="x", label="tot")
 
 
+#6:26
+#223:244
+dff = pd.read_excel("/Users/giuseppecangemi/Desktop/Covid19_Sicily_ITA STATA/Covi19_Italy.xlsx").iloc[6:26]
+dzz = pd.read_excel("/Users/giuseppecangemi/Desktop/Covid19_Sicily_ITA STATA/Covi19_Italy.xlsx").iloc[223:244]
+
+#RICOVERATI CON SINTOMI E TERAPIA INTENNSIVA
+
+fig = plt.figure()
+ax = fig.add_subplot()
+sns.regplot(dff["ricoverati_con_sintomi"], dff["terapia_intensiva"], label="1-21 Marzo")
+sns.regplot(dzz["ricoverati_con_sintomi"], dzz["terapia_intensiva"], label="4-24 Ottobre")
+plt.grid()
+plt.legend()
+ax.set_xlabel("@giuseppecangemi", position=(0.,1e6), horizontalalignment="left")
+
+
+X = dzz["ricoverati_con_sintomi"]
+X = sm.add_constant(X)
+model = sm.OLS(dzz["terapia_intensiva"], X).fit()
+print(model.summary())
+
+ln_ric = np.log(dff["ricoverati_con_sintomi"])
+ln_ter = np.log(dff["terapia_intensiva"])
+ln1_ric = np.log(dzz["ricoverati_con_sintomi"])
+ln1_ter = np.log(dzz["terapia_intensiva"])
+X1 = ln_ric 
+X1 = sm.add_constant(X1)
+model1 = sm.OLS(ln_ter,X1).fit()
+print(model1.summary())
+predict = model1.predict()
+
+plt.plot(predict)
+
+sns.regplot(ln_ric, ln_ter)
+sns.regplot(ln1_ric, ln1_ter)
+
+#TERAPIA INTENSNIVA E DECEDUTI
+X = df15_ago["terapia_intensiva"]
+X = sm.add_constant(X)
+model = sm.OLS(df15_ago["deceduti"], X).fit()
+residual = model.resid
+print(model.summary())
+
+sns.regplot( df3["terapia_intensiva"], df3["deceduti"])
+print(residual)
+sns.distplot(residual)
+fig = plt.figure()
+ax = fig.add_subplot()
+plt.scatter(zero,residual)
+plt.axvline(y=0)
+
+
+
 
 ```
