@@ -1,12 +1,21 @@
 ```python
+import pandas as pd 
+import numpy as np
+from scipy import stats
+import scipy as sp
+import statsmodels.api as sm #per OLS
+import statsmodels.formula.api as smf
+import matplotlib.pyplot as plt
+import seaborn as sns
+from time import time
+from matplotlib.ticker import (AutoMinorLocator, MultipleLocator)
+from statsmodels.compat import lzip
+import statsmodels.stats.api as sms
 
-#-----------------------------------------------------–#
-#-----------------------------------------------------–#
 #-----------------------------------------------------–#
 #----------------TASSO DI CRESCITA---------------------#
 #-----------------------------------------------------–#
-#-----------------------------------------------------–#
-#-----------------------------------------------------–#
+
 #ottobre:
 ln_deceduti_ott = np.log(df3["deceduti"])
 ln_icu_ott = np.log(df3["terapia_intensiva"])
