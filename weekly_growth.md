@@ -1,4 +1,17 @@
 ```python
+import pandas as pd 
+import numpy as np
+from scipy import stats
+import scipy as sp
+import statsmodels.api as sm #per OLS
+import statsmodels.formula.api as smf
+import matplotlib.pyplot as plt
+import seaborn as sns
+from time import time
+from matplotlib.ticker import (AutoMinorLocator, MultipleLocator)
+from statsmodels.compat import lzip
+import statsmodels.stats.api as sms
+
 df_r = df[["data", "terapia_intensiva", "nuovi_positivi", "var_tamponi", "var_deceduti",
              "ricoverati_con_sintomi", "var_osp"]].iloc[486:]       
 
