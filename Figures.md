@@ -1,4 +1,4 @@
-
+```python
 #GRAPH:ICU-nuovi_pos-movingaverage (tot.)
 fig, ax = plt.subplots()
 plt.plot(df["data"], df["terapia_intensiva"], color = "r", label="ICU")
@@ -57,3 +57,4 @@ sns.regplot(dzz["ricoverati_con_sintomi"], dzz["terapia_intensiva"], label="4-24
 plt.grid()
 plt.legend()
 ax.set_xlabel("Kangemi_Edu", position=(0.,1e6), horizontalalignment="left")
+```
