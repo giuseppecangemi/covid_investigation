@@ -131,7 +131,7 @@ plt.legend()
 plt.grid()
 ax.set(xlabel="Tamponi Giornalieri", ylabel="Positivi Giornalieri")
 plt.title("Regressione lineare tra Positivi Giornalieri e Tamponi Giornalieri")
-#ax.set_xlabel ("Kangemi_Edu", position=(0.,1e6),horizontalalignment="left" )
+#ax.set_xlabel ("giuseppecangemi", position=(0.,1e6),horizontalalignment="left" )
 plt.gcf().text(0.06, 0.035, "@giuseppecangemi", fontsize=10)
 
 
@@ -157,7 +157,7 @@ plt.legend()
 plt.grid()
 ax.set(xlabel="Tamponi Giornalieri", ylabel="Positivi Giornalieri")
 plt.title("Regressione lineare tra Positivi Giornalieri e Tamponi Giornalieri")
-#ax.set_xlabel ("Kangemi_Edu", position=(0.,1e6),horizontalalignment="left" )
+#ax.set_xlabel ("giuseppecangemi", position=(0.,1e6),horizontalalignment="left" )
 plt.gcf().text(0.06, 0.035, "@giuseppecangemi", fontsize=10)
 
 ##############################################################################
@@ -172,18 +172,6 @@ xp = dfff["var_tamponi"]
 xp = sm.add_constant(xp)
 m = sm.OLS(dfff["nuovi_positivi"], xp).fit()
 print(m.summary())
-
-
-### media rispetto i periodi di tempo###
-mama = df_nov_2021["var_tamponi"].rolling(7).mean()
-mama
-mamama = df["var_tamponi"].rolling(7).mean()
-mamama
-
-aja = df["var_tamponi"].iloc[283:296]
-ma_aja = aja.rolling(7).mean()
-ma_aja
-
 
 
 #Regressione 27 paesi fully vacc/death pop
