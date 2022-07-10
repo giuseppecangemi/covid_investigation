@@ -1,4 +1,3 @@
-```python
 import matplotlib.pyplot as plt
 import seaborn as sns
 import statsmodels.api as sm #per OLS
@@ -200,8 +199,3 @@ fig = plt.figure()
 ax = fig.add_subplot()
 plt.scatter(zero,residual)
 plt.axvline(y=0)
-
-
-
-
-```
