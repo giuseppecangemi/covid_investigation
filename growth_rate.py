@@ -1,4 +1,3 @@
-```python
 import pandas as pd 
 import numpy as np
 from scipy import stats
@@ -272,4 +271,4 @@ ax.plot(MA_dec15_nolog,"#1f77b4ff", linewidth=2, label="MA tasso di variazione d
 ax.set_title("Tasso di variazione (no log) ICU & Decessi dal 15 Agosto ad oggi")
 ax.set_xlabel ("Kangemi_Edu", position=(0.,1e6),horizontalalignment="left" )
 plt.legend()
-```
+
