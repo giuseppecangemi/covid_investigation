@@ -1,4 +1,3 @@
-```python
 import pandas as pd 
 import statsmodels.formula.api as smf
 import matplotlib.pyplot as plt
@@ -276,7 +275,3 @@ sns.histplot(r, kde=True)
 
 ax = sns.regplot(a["fully"], y=ln_y)
 
-
-669160 + 697740 + 566300+ 337222 + 851865 + 779303 + 901450
-
-```
