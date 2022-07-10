@@ -1,4 +1,3 @@
-```python
 import pandas as pd 
 import numpy as np
 from scipy import stats
@@ -154,6 +153,3 @@ plt.title(label="Incremento settimanale positivi giornalieri", fontsize=15)
 ax.set_xticklabels(["15/07", "8/07","28/07", "17/08","6/09", "26/09","16/10", "5/11","15/10", "15/07"])
 plt.grid(linewidth=0.3)
 
-
-
-```
