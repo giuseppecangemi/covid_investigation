@@ -1,4 +1,4 @@
-```python
+
 import pandas as pd 
 
 #DataFrame TOTAL al 2022-03-25:
@@ -63,5 +63,3 @@ df_lug["MA_dec"] = df["var_deceduti"].rolling(7).mean()
 diff_icu = df_lug["terapia_intensiva"].shift(1)
 df_lug["var_icu"] = df_lug["terapia_intensiva"] - diff_icu
 df_lug["MA7_icu"] = df_lug["var_icu"].rolling(7).mean()
-
-```
