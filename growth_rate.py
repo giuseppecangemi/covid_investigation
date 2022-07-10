@@ -94,7 +94,7 @@ ax2.plot(dec_rate_lug,"o:",markersize=2, label="tasso di crescita (log) deceduti
 ax2.plot(MA_dec_rate,"#1f77b4ff",linewidth=2, label="MA(7) tasso di crescita deceduti-Asse DX")
 ax.set_xlabel("Giorni")
 #ax.set_xticklabels([])
-ax.set_xlabel("Kangemi_Edu", position=(0.,1e6),horizontalalignment="left" )
+ax.set_xlabel("@giuseppecangemi", position=(0.,1e6),horizontalalignment="left" )
 fig.legend(loc=1, bbox_to_anchor=(0.5,1), bbox_transform=ax.transAxes)
 
 # DA LUGLIO 2021 SENZA LOG
@@ -176,7 +176,7 @@ plt.plot(deceduti_sett, "o:", markersize=2, label="Tasso di variazione deceduti"
 plt.plot(ma_terapia_sett, color="#1f77b4ff", linewidth=2, label="Media mobile sul tasso di variazione ICU")
 plt.plot(ma_deceduti_sett, color="orange", linewidth=2,label="Media mobile sul tasso di variazione deceduti")
 plt.axhline(y=0, linestyle="--",linewidth=1, color="k")
-ax.set_xlabel("Kangemi_Edu",position=(0.,1e6), horizontalalignment="left")
+ax.set_xlabel("@giuseppecangemi",position=(0.,1e6), horizontalalignment="left")
 ax.set_title("Tasso di crescita ICU & Deceduti")
 plt.legend()
 
@@ -212,7 +212,7 @@ ax2 = ax.twinx()
 ax2.plot(dec15_rate,"o:",markersize=2, label="tasso di crescita log Decessi-Asse DX")
 ax2.plot(MA_dec15, color="#1f77b4ff", label="MA Decessi_rate")
 fig.legend(loc=1, bbox_to_anchor=(0.8,1), bbox_transform=ax.transAxes) 
-ax.set_xlabel ("Kangemi_Edu", position=(0.,1e6),horizontalalignment="left" )
+ax.set_xlabel ("@giuseppecangemi", position=(0.,1e6),horizontalalignment="left" )
 
 #logaritmo tasso di crescita da LUGLIO 2021:
 icu_lug = (df_lug["terapia_intensiva"])
@@ -242,7 +242,7 @@ ax2 = ax.twinx()
 ax2.plot(dec_lug_rate,"o:",markersize=2, label="tasso di crescita log Decessi-Asse DX")
 ax2.plot(MA_dec_lug, color="#1f77b4ff", label="MA Decessi_rate")
 fig.legend(loc=1, bbox_to_anchor=(0.8,1), bbox_transform=ax.transAxes) 
-ax.set_xlabel ("Kangemi_Edu", position=(0.,1e6),horizontalalignment="left" )
+ax.set_xlabel ("@giuseppecangemi", position=(0.,1e6),horizontalalignment="left" )
 
 #tasso di crescita da luglio 2021 in log
 fig= plt.figure()
@@ -251,7 +251,7 @@ ax.plot(pos_lug_rate, "o:", markersize=2, label="Tasso di crescita log positivi 
 ax.plot(MA_pos_lug, color="orange", label="MA positivi daily")
 plt.axhline(y=0, color="black")
 fig.legend(loc=1, bbox_to_anchor=(0.8,1), bbox_transform=ax.transAxes) 
-ax.set_xlabel ("Kangemi_Edu", position=(0.,1e6),horizontalalignment="left" )
+ax.set_xlabel ("@giuseppecangemi", position=(0.,1e6),horizontalalignment="left" )
 
 #senza log: 
 lag_icu15_nolog = icu15.shift(1)
@@ -269,6 +269,6 @@ ax.plot(icu15_rate_nolog,"o:" ,markersize = 2,label="tasso di variazione ICU dal
 ax.plot(MA_icu15_nolog, "#ff7f0eff", linewidth=2, label="MA tasso di variazione ICU")
 ax.plot(MA_dec15_nolog,"#1f77b4ff", linewidth=2, label="MA tasso di variazione deceduti")
 ax.set_title("Tasso di variazione (no log) ICU & Decessi dal 15 Agosto ad oggi")
-ax.set_xlabel ("Kangemi_Edu", position=(0.,1e6),horizontalalignment="left" )
+ax.set_xlabel ("@giuseppecangemi", position=(0.,1e6),horizontalalignment="left" )
 plt.legend()
 
